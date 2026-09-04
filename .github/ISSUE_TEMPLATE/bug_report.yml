@@ -1,29 +1,31 @@
-name: 🐛 Reportar Bug
-description: Reporta un error de alguno de los productos
+name: "🐛 Bug de producto"
+description: "Reportar un bug de alguno de mis productos"
 title: "[BUG] "
 labels: ["type: bug"]
 body:
     - type: dropdown
     id: producto
     attributes:
-      label: ¿A qué producto pertenece?
-      description: Selecciona uno de los 20
+      label: "¿A qué producto pertenece? *"
+      description: "Elegí uno, es obligatorio"
       options:
-                - app-ventas
-                - web-panel
-                - api
-                - landing
-        #... agrega los 20
+                - Producto 1
+                - Producto 2
+                - Producto 3
+                - Producto 4
+                - Producto 5
     validations:
       required: true
+
     - type: textarea
-    id: descripcion
+    id: que-paso
     attributes:
       label: ¿Qué pasó?
-      placeholder: Contanos el bug...
+      placeholder: Explica el error
     validations:
       required: true
-    - type: input
-    id: version
+
+    - type: textarea
+    id: esperado
     attributes:
-      label: Versión del producto
+      label: ¿Qué esperabas que pase?
