@@ -1,0 +1,29 @@
+name: 🐛 Reportar Bug
+description: Reporta un error de alguno de los productos
+title: "[BUG] "
+labels: ["type: bug"]
+body:
+    - type: dropdown
+    id: producto
+    attributes:
+      label: ¿A qué producto pertenece?
+      description: Selecciona uno de los 20
+      options:
+                - app-ventas
+                - web-panel
+                - api
+                - landing
+        #... agrega los 20
+    validations:
+      required: true
+    - type: textarea
+    id: descripcion
+    attributes:
+      label: ¿Qué pasó?
+      placeholder: Contanos el bug...
+    validations:
+      required: true
+    - type: input
+    id: version
+    attributes:
+      label: Versión del producto
